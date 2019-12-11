@@ -4,7 +4,7 @@ import java.lang.Integer.parseInt
 import kotlin.math.floor
 
 fun main() {
-    val modules = shared.listFrom("data/day_1.txt").map { parseInt(it) }
+    val modules = shared.listFromFile("data/day_1.txt").map { parseInt(it) }
     val part1Fuel = modules.map { fuelForSingleMass(it) }.sum()
     val part2Fuel = modules.map { fuelForModuleAndFuel(it) }.sum()
 
