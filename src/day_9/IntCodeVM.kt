@@ -19,7 +19,7 @@ fun main() {
 class IntCodeVM(program: List<BigInteger>) {
 
     private val memory: MutableList<BigInteger> = MutableList(program.size * 10) { 0.toBigInteger() }
-    private var state: IntCodeVMState = IntCodeVMState.RUNNING
+    var state: IntCodeVMState = IntCodeVMState.RUNNING
     private var instructionPointer: Int = 0
     private var base: BigInteger = 0.toBigInteger()
     val inputBuffer: MutableList<BigInteger> = mutableListOf()
